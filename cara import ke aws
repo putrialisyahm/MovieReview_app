@@ -1,0 +1,12 @@
+
+mongoimport --db mini_project_dev --collection movies ~/movies.json --drop --jsonArray
+
+
+scp -i mini9.pem ~/Desktop/user.json  ubuntu@13.212.6.137:~/user.json
+
+scp -i mini9.pem ~/Desktop/20CDA5379333151D4C1C19535BD97885.txt  ubuntu@13.212.6.137:~/.well-known/pki-validation/20CDA5379333151D4C1C19535BD97885.txt
+20CDA5379333151D4C1C19535BD97885.txt
+
+http://13.212.6.137:3000
+
+sudo ./certbot-auto --debug -v --server https://acme-v01.api.letsencrypt.org/directory certonly --webroot -w /var/www/mini9 -d ec2-13-212-6-137.ap-southeast-1.compute.amazonaws.com -d www.ec2-13-212-6-137.ap-southeast-1.compute.amazonaws.com
